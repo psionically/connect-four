@@ -2,8 +2,7 @@
 # This is a program for a very simple Connect Four game simulation.
 # The human player will always go first.
 # The computer's moves are randomly generated.
-# When there is a winner, an appropriate message is output and the program
-# terminates.
+# When there is a winner, an appropriate message is output and the program terminates.
 import random
 import time
 
@@ -13,8 +12,7 @@ def display(matrix):
     for row in matrix:
         print(' '.join(map(str,row)))
 
-# This function will randomly generate the computer's move and place it on
-# the board
+# This function will randomly generate the computer's move and place it on the board
 def compMove(matrix):
     filled = False
     valid = False
@@ -46,8 +44,7 @@ def compMove(matrix):
 
             
 
-# This function will get input from the human player and place
-# the move on the board
+# This function will get input from the human player and place the move on the board
 def humMove(matrix):
     c = int(input("Input the column number (1-7) for your move: "))
     c = c - 1
@@ -134,7 +131,7 @@ def win(matrix):
 
     return False  
 
-# This is the main game function
+# Main game function
 def game():
     rows, cols = 6, 7
     
@@ -162,5 +159,5 @@ def game():
         again = input("Play again (Y/N)? ")
 
 
-# Calls main game function in order to begin the game
+# Calls main game function to begin the game
 game()
